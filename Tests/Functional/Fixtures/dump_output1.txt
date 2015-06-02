@@ -1,9 +1,6 @@
-kernel.root_dir => /Users/brensch/code/ConfigDumpBundle/Tests/Functional
 kernel.environment => test
 kernel.debug => 1
 kernel.name => Functional
-kernel.cache_dir => /private/var/folders/3t/rcj435354_n1z6yk9pfj4kk00000gn/T/ConfigDumpBundle
-kernel.logs_dir => /Users/brensch/code/ConfigDumpBundle/Tests/Functional/logs
 kernel.bundles => Array
 (
     [FrameworkBundle] => Symfony\Bundle\FrameworkBundle\FrameworkBundle
@@ -93,7 +90,6 @@ router_listener.class => Symfony\Component\HttpKernel\EventListener\RouterListen
 router.request_context.host => localhost
 router.request_context.scheme => http
 router.request_context.base_url => ""
-router.resource => /Users/brensch/code/ConfigDumpBundle/Tests/Functional/config/routing.yml
 router.cache_class_prefix => FunctionalTest
 request_listener.http_port => 80
 request_listener.https_port => 443
@@ -104,6 +100,5 @@ debug.debug_handlers_listener.class => Symfony\Component\HttpKernel\EventListene
 debug.stopwatch.class => Symfony\Component\Stopwatch\Stopwatch
 debug.error_handler.throw_at => -1
 debug.event_dispatcher.class => Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher
-debug.container.dump => /private/var/folders/3t/rcj435354_n1z6yk9pfj4kk00000gn/T/ConfigDumpBundle/FunctionalTestDebugProjectContainer.xml
 debug.controller_resolver.class => Symfony\Component\HttpKernel\Controller\TraceableControllerResolver
 console.command.ids => []

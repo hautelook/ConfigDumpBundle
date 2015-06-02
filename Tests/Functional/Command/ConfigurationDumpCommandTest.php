@@ -22,8 +22,18 @@ class ConfigurationDumpCommandTest extends AbstractCommandTest
         $commandTester = new CommandTester($command);
         $commandTester->execute([]);
 
-        $display = $commandTester->getDisplay();
+        $display = explode("\n", $commandTester->getDisplay());
 
-        $this->assertStringEqualsFile(__DIR__ . '/../Fixtures/dump_output1.txt', $display);
+        foreach ($this->getFixtureLines() as $fixtureLine) {
+            $this->assertTrue(in_array($fixtureLine, $display));
+        }
+    }
+
+    /**
+     * @return string[]
+     */
+    private function getFixtureLines()
+    {
+        return explode("\n", file_get_contents(__DIR__ . '/../Fixtures/dump_output1.txt'));
     }
 }
