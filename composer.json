@@ -1,7 +1,8 @@
 {
     "name": "hautelook/config-dump-bundle",
-    "description": "description_text",
+    "description": "Symfony Command that allows to dump the whole configuration for the container",
     "minimum-stability": "stable",
+    "keywords": ["Console", "Configuration", "Parameters"],
     "license": "MIT",
     "authors": [
         {
