@@ -1,6 +1,6 @@
 <?php
 
-namespace Hautelook\ApiBundle\Command;
+namespace Hautelook\ConfigDumpBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
@@ -25,20 +25,32 @@ class ConfigurationDumpCommand extends ContainerAwareCommand
         $parameters = $container->getParameterBag();
 
         foreach ($parameters->all() as $name => $param) {
-            $output->write(sprintf('<info>%s</info> => ', $name));
-            $output->write($this->formatParameter($param));
-            $output->writeln('');
+            $this->outputParameter($output, $name, $param);
         }
     }
 
     private function formatParameter($param)
     {
-        if (is_string($param)) {
-            return $param;
-        } elseif (is_array($param) && empty($param)) {
+        if (is_array($param) && empty($param)) {
             return '[]';
+        } elseif (empty($param)) {
+            return '""';
+        } elseif (is_string($param)) {
+            return $param;
         }
 
         return print_r($param, true);
+    }
+
+    /**
+     * @param OutputInterface $output
+     * @param string          $name
+     * @param string          $param
+     */
+    private function outputParameter(OutputInterface $output, $name, $param)
+    {
+        $output->write(sprintf('<info>%s</info> => ', $name));
+        $output->write($this->formatParameter($param));
+        $output->writeln('');
     }
 }
