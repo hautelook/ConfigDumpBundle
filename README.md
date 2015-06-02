@@ -4,6 +4,8 @@ ConfigDumpBundle
 A Symfony2 bundle that provides a console command to dump all set parameters.
 
 [![Build Status](https://travis-ci.org/hautelook/ConfigDumpBundle.svg)](https://travis-ci.org/hautelook/ConfigDumpBundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hautelook/ConfigDumpBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hautelook/ConfigDumpBundle/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/hautelook/ConfigDumpBundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/hautelook/ConfigDumpBundle/?branch=master)
 
 ## Introduction
 
