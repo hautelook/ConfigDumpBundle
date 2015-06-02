@@ -10,6 +10,8 @@ A Symfony2 bundle that provides a console command to dump all set parameters.
 
 ## Introduction
 
+As was pointed out, there actually is `php app/console container:debug --parameters` which I was not aware of. So, consider this a useless exercise. :)
+
 ## Installation
 
 Simply run assuming you have installed composer.phar or composer binary (or add to your `composer.json` and run composer
